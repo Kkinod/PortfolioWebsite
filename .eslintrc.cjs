@@ -33,21 +33,5 @@ module.exports = {
                 unnamedComponents: 'arrow-function',
             },
         ],
-        // "indent": [
-        //     "error",
-        //     "tab"
-        // ],
-        // "linebreak-style": [
-        //     "error",
-        //     "windows"
-        // ],
-        // "quotes": [
-        //     "error",
-        //     "double"
-        // ],
-        // "semi": [
-        //     "error",
-        //     "always"
-        // ]
     }
 };
