@@ -1,12 +1,11 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './components/pages/Home/Home';
-import './App.css';
+import Preloader from './components/pages/Preloader/Preloader';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Preloader />} />
       </Routes>
     </BrowserRouter>
   );
