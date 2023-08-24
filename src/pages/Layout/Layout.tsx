@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import SplashScreen from '../../components/SplashScreen/SplashScreen';
 
 const Layout = () => {
@@ -7,7 +8,7 @@ const Layout = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 2000);
+    }, 2500);
   }, []);
 
   return (
@@ -15,9 +16,11 @@ const Layout = () => {
       {isLoading ? (
         <SplashScreen />
       ) : (
-        <section id="main">
-          <div />
-        </section>
+        <div>
+          <div className="cursor" />
+          <div className="header" />
+          <Outlet />
+        </div>
       )}
     </div>
   );
