@@ -1,11 +1,11 @@
-import { labels } from '../../../shared/labels';
+import { labels } from '../../shared/labels';
 import {
   LoadingPageContainer,
   NickName,
   StyledLogoSvg,
-} from './Preloader.styles';
+} from './SplashScreen.styles';
 
-const Preloader = () => {
+const SplashScreen = () => {
   return (
     <LoadingPageContainer>
       <StyledLogoSvg />
@@ -16,4 +16,4 @@ const Preloader = () => {
   );
 };
 
-export default Preloader;
+export default SplashScreen;
