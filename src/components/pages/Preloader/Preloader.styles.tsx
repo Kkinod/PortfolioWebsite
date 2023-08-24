@@ -15,12 +15,27 @@ export const LoadingPageContainer = styled.div`
   background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
 `;
 
+const appearAndComeUp = keyframes`
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
 export const NickName = styled.div`
   margin-left: 3px;
   color: #ffffff;
+  opacity: 0;
   font-size: 1.25rem;
   letter-spacing: 0.75rem;
   text-transform: uppercase;
+  overflow: hidden;
+  animation: ${appearAndComeUp} 2s forwards;
+  animation-delay: 0.3s;
 `;
 
 const drawAnimation = keyframes`
@@ -38,7 +53,7 @@ const StyledSvg = styled.svg`
   fill-opacity: 0;
   stroke-width: 3px;
   stroke-dasharray: 4500;
-  animation: ${drawAnimation} 4s ease;
+  animation: ${drawAnimation} 10s ease;
 `;
 
 export const StyledLogoSvg = () => (
