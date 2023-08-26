@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { useState } from 'react';
 import {
   Dropdown,
   HeaderStyled,
@@ -10,6 +11,11 @@ import {
 } from './Header.styles';
 
 const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleToggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     // <header className="st-site-header st-style1 st-sticky-header">
     <HeaderStyled>
@@ -23,12 +29,12 @@ const Header = () => {
           <LiStyled>Blog</LiStyled>
           <LiStyled>Contact</LiStyled>
         </UlStyled>
-        <ToggleBtn>
+        <ToggleBtn onClick={handleToggleMenu}>
           <FontAwesomeIcon icon={faBars} />
         </ToggleBtn>
       </Navbar>
 
-      <Dropdown>
+      <Dropdown isOpen={isOpen}>
         <LiStyled>Home</LiStyled>
         <LiStyled>About</LiStyled>
         <LiStyled>Resume</LiStyled>

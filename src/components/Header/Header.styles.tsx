@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+interface IDropdown {
+  isOpen: boolean;
+}
+
 export const HeaderStyled = styled.header`
   //position: fixed;
   //z-index: 200;
@@ -60,9 +64,33 @@ export const ToggleBtn = styled.div`
   }
 `;
 
-export const Dropdown = styled.div`
+export const Dropdown = styled.div<IDropdown>`
+  display: none;
   position: absolute;
   right: 2rem;
   width: 300px;
-  background: rgba(255, 255, 255, 0.1);
+
+  height: ${(props) => (props.isOpen ? '288px' : '0px')};
+
+  background: rgba(180, 180, 180, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  ${LiStyled} {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 992px) {
+    display: block;
+  }
+
+  @media (max-width: 576px) {
+    left: 2rem;
+    width: unset;
+  }
 `;
