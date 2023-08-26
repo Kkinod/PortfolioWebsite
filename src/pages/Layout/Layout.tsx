@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import SplashScreen from '../../components/SplashScreen/SplashScreen';
+import Header from '../../components/Header/Header';
 
 const Layout = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -15,9 +17,13 @@ const Layout = () => {
       {isLoading ? (
         <SplashScreen />
       ) : (
-        <section id="main">
-          <div />
-        </section>
+        <div>
+          <div className="cursor" />
+          <Header />
+          <div>
+            <Outlet />
+          </div>
+        </div>
       )}
     </div>
   );
