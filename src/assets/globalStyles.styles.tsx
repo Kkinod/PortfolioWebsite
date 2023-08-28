@@ -20,6 +20,6 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     line-height: 1.6em;
     overflow-x: hidden;
-    height: 100vh;
+    //height: 100vh;
   }
 `;

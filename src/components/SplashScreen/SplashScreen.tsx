@@ -10,7 +10,7 @@ const SplashScreen = () => {
     <LoadingPageContainer>
       <StyledLogoSvg />
       <div>
-        <NickName>{labels.Preloader.nickName}</NickName>
+        <NickName>{labels.preloader.nickName}</NickName>
       </div>
     </LoadingPageContainer>
   );
