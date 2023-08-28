@@ -12,13 +12,24 @@ import {
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [styleChange, setStyleChange] = useState(false);
+
+  const changeNavbarStyles = () => {
+    if (window.scrollY >= 60) {
+      setStyleChange(true);
+    } else {
+      setStyleChange(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeNavbarStyles);
+
   const handleToggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    // <header className="st-site-header st-style1 st-sticky-header">
-    <HeaderStyled>
+    <HeaderStyled styleChange={styleChange}>
       <Navbar>
         {/* <div>Donikk</div> */}
         <UlStyled>
