@@ -1,15 +1,21 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 interface IDropdown {
   isOpen: boolean;
 }
 
-export const HeaderStyled = styled.header`
-  //position: fixed;
-  //z-index: 200;
-  //width: 100%;
-  //top: 0;
-  //left: 0;
+interface INavbar {
+  styleChange: boolean;
+}
+
+export const HeaderStyled = styled.header<INavbar>`
+  background: ${(props) => (props.styleChange ? '#dad9d9' : '')};
+
+  position: fixed;
+  z-index: 200;
+  width: 100%;
+  top: 0;
+  left: 0;
   //
   //display: flex;
   //justify-content: center;
@@ -18,7 +24,8 @@ export const HeaderStyled = styled.header`
 `;
 
 export const Navbar = styled.nav`
-  background: blue;
+  //background: #dad9d9;
+
   height: 60px;
 
   // w sumie nie wiem czy u mnie to po coś się przyda
@@ -54,7 +61,7 @@ export const UlStyled = styled.ul`
 `;
 
 export const ToggleBtn = styled.div`
-  color: #ffffff;
+  color: black;
   font-size: 1.5rem;
   cursor: pointer;
   display: none;
@@ -73,6 +80,7 @@ export const Dropdown = styled.div<IDropdown>`
   height: ${(props) => (props.isOpen ? '288px' : '0px')};
 
   background: rgba(180, 180, 180, 0.1);
+
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;
