@@ -1,8 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
-  @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
   
   *, 
   *::after, 
@@ -20,6 +18,7 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     line-height: 1.6em;
     overflow-x: hidden;
-    //height: 100vh;
+    background: ${({ theme }) => theme.background};
+    transition: all 0.50s linear;
   }
 `;

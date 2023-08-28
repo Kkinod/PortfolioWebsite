@@ -14,10 +14,10 @@ export const NavStyled = styled.nav`
 `;
 
 export const ToggleBtn = styled.div`
+  display: none;
   color: black;
   font-size: 1.5rem;
   cursor: pointer;
-  display: none;
 
   @media (max-width: 992px) {
     display: block;

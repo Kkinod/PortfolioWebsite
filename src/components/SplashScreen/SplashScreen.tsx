@@ -1,4 +1,4 @@
-import { labels } from '../../shared/labels';
+import { labels } from '../../shared/constants/labels';
 import {
   LoadingPageContainer,
   NickName,
