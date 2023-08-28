@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';
 import { LiStyled } from '../Header.styles';
 
 interface IWrapper {
-  isOpen: boolean;
+  $isOpen: boolean;
 }
 
 export const Wrapper = styled.div<IWrapper>`
@@ -11,7 +11,7 @@ export const Wrapper = styled.div<IWrapper>`
   right: 2rem;
   width: 300px;
 
-  height: ${(props) => (props.isOpen ? '288px' : '0px')};
+  height: ${(props) => (props.$isOpen ? '288px' : '0px')};
 
   background: rgba(180, 180, 180, 0.1);
 

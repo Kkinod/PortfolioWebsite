@@ -1,7 +1,7 @@
 import styled from 'styled-components/macro';
 
 interface IHeader {
-  styleChange: boolean;
+  $styleChange: boolean;
 }
 
 export const HeaderStyled = styled.header<IHeader>`
@@ -11,7 +11,7 @@ export const HeaderStyled = styled.header<IHeader>`
   left: 0;
   width: 100%;
   padding: 0 2rem;
-  background: ${(props) => (props.styleChange ? '#dad9d9' : '')};
+  background: ${(props) => (props.$styleChange ? '#dad9d9' : '')};
 `;
 
 export const LiStyled = styled.li`
