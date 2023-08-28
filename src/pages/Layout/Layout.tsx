@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
-import SplashScreen from '../../components/SplashScreen/SplashScreen';
 import Header from '../../components/Header/Header';
+import SplashScreen from '../../components/SplashScreen/SplashScreen';
 
 const Layout = () => {
   const [isLoading, setIsLoading] = useState(true);
