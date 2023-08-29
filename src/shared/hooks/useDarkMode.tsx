@@ -1,20 +1,27 @@
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
-export const useDarkMode = () => {
+interface ThemeTogglerType {
+  (): void;
+}
+
+export const useDarkMode = (): [string, ThemeTogglerType] => {
   const [theme, setTheme] = useState('light');
 
-  const setMode = (mode) => {
+  const setMode = (mode: string) => {
     window.localStorage.setItem('theme', mode);
     setTheme(mode);
   };
 
   const themeToggler = () => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     theme === 'light' ? setMode('dark') : setMode('light');
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const localTheme = window.localStorage.getItem('theme');
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     localTheme && setTheme(localTheme);
   }, []);
+
   return [theme, themeToggler];
 };

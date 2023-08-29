@@ -11,16 +11,17 @@ interface INavbar {
   handleToggleMenu: () => void;
 }
 const Navbar = ({ handleToggleMenu }: INavbar) => {
-  const toggleTheme = useContext(ThemeTogglerContext);
+  const { theme, themeToggler } = useContext(ThemeTogglerContext);
 
   return (
     <NavStyled>
+      <div>donikk</div>
       <UlStyled>
         {sections.map((section) => {
-          return <LiStyled key={section}>{section}</LiStyled>;
+          return <LiStyled key={section}>{section.toUpperCase()}</LiStyled>;
         })}
       </UlStyled>
-      <Toggle toggleTheme={toggleTheme} />
+      <Toggle toggleTheme={themeToggler} theme={theme} />
       <ToggleBtn onClick={handleToggleMenu}>
         <FontAwesomeIcon icon={faBars} />
       </ToggleBtn>

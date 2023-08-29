@@ -15,7 +15,7 @@ export const HeaderStyled = styled.header<IHeader>`
 `;
 
 export const LiStyled = styled.li`
-  color: black;
+  color: ${({ theme }) => theme.text};
   font-size: 1rem;
 
   &:hover {

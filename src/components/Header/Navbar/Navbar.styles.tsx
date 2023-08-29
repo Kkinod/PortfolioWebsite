@@ -2,9 +2,9 @@ import styled from 'styled-components/macro';
 
 export const NavStyled = styled.nav`
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  max-width: 75rem;
+  max-width: 85rem;
   height: 60px;
   margin: 0 auto;
 
@@ -15,9 +15,10 @@ export const NavStyled = styled.nav`
 
 export const ToggleBtn = styled.div`
   display: none;
-  color: black;
+  color: ${({ theme }) => theme.text};
   font-size: 1.5rem;
   cursor: pointer;
+  transition: color 0.5s linear;
 
   @media (max-width: 992px) {
     display: block;

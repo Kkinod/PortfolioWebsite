@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <ThemeProvider theme={themeMode}>
-      <ThemeTogglerContext.Provider value={themeToggler}>
+      <ThemeTogglerContext.Provider value={{ theme, themeToggler }}>
         <>
           <GlobalStyle />
           <BrowserRouter>
