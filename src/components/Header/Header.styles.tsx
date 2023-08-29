@@ -12,6 +12,8 @@ export const HeaderStyled = styled.header<IHeader>`
   width: 100%;
   padding: 0 2rem;
   background: ${(props) => (props.$styleChange ? '#dad9d9' : '')};
+  box-shadow: ${(props) =>
+    props.$styleChange ? '0 1px 16px -6px rgba(66, 68, 90, 1)' : ''};
 `;
 
 export const LiStyled = styled.li`

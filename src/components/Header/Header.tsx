@@ -1,24 +1,15 @@
 import { useState } from 'react';
 import Dropdown from './Dropdown/Dropdown';
 import Navbar from './Navbar/Navbar';
+import useScrollPosition from '../../shared/hooks/useScrollPosition';
 import { HeaderStyled } from './Header.styles';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [styleChange, setStyleChange] = useState(false);
-
-  const changeNavbarStyles = () => {
-    if (window.scrollY >= 60) {
-      setStyleChange(true);
-    } else {
-      setStyleChange(false);
-    }
-  };
-
-  window.addEventListener('scroll', changeNavbarStyles);
+  const styleChange = useScrollPosition();
 
   const handleToggleMenu = () => {
-    setIsOpen(!isOpen);
+    setIsOpen((prevIsOpen) => !prevIsOpen);
   };
 
   return (
