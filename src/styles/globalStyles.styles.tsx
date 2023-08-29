@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
     font-family: "Inter", sans-serif;
     font-size: 16px;
     font-weight: 400;
-    line-height: 1.6em;
+    //line-height: 1.6em;
     overflow-x: hidden;
     background: ${({ theme }) => theme.background};
     transition: all 0.50s linear;
