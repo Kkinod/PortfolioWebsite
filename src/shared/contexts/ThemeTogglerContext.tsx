@@ -1,3 +1,8 @@
 import { createContext } from 'react';
 
-export const ThemeTogglerContext = createContext(undefined);
+const initialState = {
+  theme: 'light',
+  themeToggler: () => {},
+};
+
+export const ThemeTogglerContext = createContext(initialState);
