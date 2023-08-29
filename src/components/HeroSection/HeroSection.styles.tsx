@@ -1,4 +1,5 @@
 import styled from 'styled-components/macro';
+import { keyframes } from 'styled-components';
 
 export const HeroSectionStyled = styled.section`
   //height: calc(100vh - 60px);
@@ -10,15 +11,16 @@ export const Container = styled.div`
   align-items: center;
   width: 100%;
   height: calc(100vh - 60px);
-  padding: 0 10%;
+  padding: 0 5%;
   overflow: hidden;
 `;
 
 export const Wrapper = styled.div`
-  width: 50%;
+  width: calc(100% / 3);
 `;
 
 export const TextWrapper = styled(Wrapper)``;
+export const RightTextWrapper = styled(Wrapper)``;
 
 export const SpanTopLine = styled.span`
   position: relative;
@@ -40,7 +42,7 @@ export const SpanTopLine = styled.span`
 export const H1Styled = styled.h1`
   display: block;
   color: ${({ theme }) => theme.reverseAccentBackground};
-  font-size: 5em;
+  font-size: 3em;
   font-weight: 900;
 `;
 
@@ -56,6 +58,50 @@ export const ParagraphStyled = styled.p`
   color: ${({ theme }) => theme.text};
 `;
 
-export const ImgWrapper = styled(Wrapper)``;
+export const ImgWrapper = styled(Wrapper)`
+  height: calc(100vh - 60px);
+`;
 
-export const ImgBox = styled.div``;
+export const ImgBox = styled.div`
+  position: relative;
+  width: 100%;
+  height: 100%;
+`;
+
+const animateUser = keyframes`
+  50% {
+    right: 30px;
+    top: 10px;
+  }
+`;
+
+const animateSplash = keyframes`
+  50% {
+    right: 49%;
+    top: 51%;
+    width: 155%;
+  }
+`;
+
+export const ImgStyled = styled.img`
+  position: relative;
+  height: 100%;
+  //width: calc(130% - 60px);
+  //top: -100px;
+  right: 50px;
+`;
+
+export const ImgHero = styled(ImgStyled)`
+  //animation: ${animateUser} 4s linear infinite;
+`;
+
+export const ImgSplash = styled(ImgStyled)`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  //transform: translate(-50%, -50%) rotate(-35deg);
+  transform: translate(-50%, -50%);
+  width: 160%;
+  filter: saturate(200%);
+  //animation: ${animateSplash} 4s linear infinite;
+`;
