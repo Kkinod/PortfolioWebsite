@@ -11,3 +11,24 @@ export const labels = {
     nickName: 'Donikk',
   },
 } as const;
+
+export const socialData = [
+  {
+    icon: 'github',
+    title: 'Github',
+    backgroundColor: '#333',
+    link: '/',
+  },
+  {
+    icon: 'youtube',
+    title: 'Youtube',
+    backgroundColor: '#ff0000',
+    link: '/',
+  },
+  {
+    icon: 'linkedin',
+    title: 'LinkedIn',
+    backgroundColor: '#4267B2',
+    link: '/',
+  },
+];

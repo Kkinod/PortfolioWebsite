@@ -1,20 +1,21 @@
+export type MyTheme = typeof lightTheme;
+
 export const lightTheme = {
-  // body: '#FFF',
   background: '#ffffff',
+  reverseBackground: '#000000',
+  reverseBackgroundRgb: '0, 0, 0',
   accentBackground: '#f3f4fD',
-  // reverseAccentBackground: '#14121e',
   reverseAccentBackground: '#4a4950',
   text: '#000000',
-  toggleBorder: '#FFF',
+  mainMotive: '#ffd700',
 } as const;
 
 export const darkTheme = {
-  // body: '#000000',
   background: '#000000',
-  // accentBackground: '#14121e',
+  reverseBackground: '#ffffff',
+  reverseBackgroundRgb: '250, 250, 250',
   accentBackground: '#4a4950',
   reverseAccentBackground: '#f3f4fD',
   text: '#ffffff',
-  // text: '#FAFAFA',
-  toggleBorder: '#6B8096',
+  mainMotive: '#ffd700',
 };
