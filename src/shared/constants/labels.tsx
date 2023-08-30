@@ -10,6 +10,13 @@ export const labels = {
   preloader: {
     nickName: 'Donikk',
   },
+
+  heroSection: {
+    greeting: 'Hello',
+    im: "I'm",
+    nameSurname: 'Kamil Pawełek',
+    occupation: 'Front-End Developer',
+  },
 } as const;
 
 export const socialData = [
