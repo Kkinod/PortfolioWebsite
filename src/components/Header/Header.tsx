@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <HeaderStyled $styleChange={styleChange}>
+    <HeaderStyled $styleChange={styleChange} className="headerr">
       <Navbar handleToggleMenu={handleToggleMenu} />
       <Dropdown isOpen={isOpen} />
     </HeaderStyled>
