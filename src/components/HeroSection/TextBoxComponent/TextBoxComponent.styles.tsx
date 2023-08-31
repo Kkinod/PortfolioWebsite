@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 export const SpanTopLine = styled.span`
   position: relative;
   display: block;
-  color: ${({ theme }) => theme.reverseAccentBackground};
+  color: ${({ theme }) => theme.text};
   font-size: 2.5rem;
   letter-spacing: 5px;
 
@@ -19,7 +19,7 @@ export const SpanTopLine = styled.span`
 
 export const H1Styled = styled.h1`
   display: block;
-  color: ${({ theme }) => theme.reverseAccentBackground};
+  color: ${({ theme }) => theme.text};
   font-size: 3em;
   font-weight: 900;
 `;
