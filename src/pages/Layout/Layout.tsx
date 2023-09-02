@@ -3,9 +3,7 @@ import { Outlet } from 'react-router-dom';
 import Header from '../../components/Header/Header';
 import SplashScreen from '../../components/SplashScreen/SplashScreen';
 import CustomCursor from '../../components/CustomCursor/CustomCursor';
-// import { LayoutContainer } from './Layout.styles';
-
-import './Layout.scss';
+import { LayoutContainer } from './Layout.styles';
 
 const Layout = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,13 +19,13 @@ const Layout = () => {
       {isLoading ? (
         <SplashScreen />
       ) : (
-        <div className="layout">
+        <LayoutContainer>
           <Header />
           <CustomCursor />
           <div>
             <Outlet />
           </div>
-        </div>
+        </LayoutContainer>
       )}
     </div>
   );

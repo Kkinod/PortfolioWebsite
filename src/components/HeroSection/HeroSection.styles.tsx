@@ -1,8 +1,6 @@
 import styled from 'styled-components/macro';
 
-export const HeroSectionStyled = styled.section``;
-
-export const Container = styled.div`
+export const HeroSectionStyled = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,11 +20,31 @@ export const LeftWrapper = styled(Wrapper)`
   height: 90%;
 `;
 
+export const MiddleWrapper = styled(Wrapper)`
+  width: 40%;
+  height: calc(100vh - 60px);
+`;
+
 export const RightTextWrapper = styled(Wrapper)`
   width: 30%;
 `;
 
-export const MiddleWrapper = styled(Wrapper)`
-  width: 40%;
-  height: calc(100vh - 60px);
+export const H2Styled = styled.h2`
+  position: absolute;
+  top: 35%;
+  left: 60%;
+  font-size: 3.8rem;
+  color: ${({ theme }) => theme.text};
+`;
+
+export const SpanStyled = styled.span`
+  color: ${({ theme }) => theme.mainMotive};
+`;
+
+export const SpanStyled2 = styled.span`
+  color: ${({ theme }) => theme.mainMotive};
+`;
+export const Signature = styled.p`
+  position: absolute;
+  color: ${({ theme }) => theme.text};
 `;

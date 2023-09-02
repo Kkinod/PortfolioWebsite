@@ -16,6 +16,16 @@ export const labels = {
     im: "I'm",
     nameSurname: 'Kamil Pawełek',
     occupation: 'Front-End Developer',
+    quote: {
+      talkIs: 'Talk is',
+      openingBracket: '{',
+      closingBracket: '}',
+      cheap: 'cheap',
+      showMeThe: 'show me the',
+      openingTag: '<',
+      closingTag: '>',
+      code: 'code',
+    },
   },
 } as const;
 
