@@ -6,33 +6,31 @@ const CustomCursor = () => {
 
   useEffect(() => {
     let timer: string | number | NodeJS.Timeout | undefined;
-    const mouseX = (event: { clientX: number }) => event.clientX;
 
-    const mouseY = (event: { clientY: number }) => event.clientY;
-
-    const positionElement = (event: MouseEvent) => {
-      const mouse = {
-        x: mouseX(event),
-        y: mouseY(event),
-      };
-
+    const positionElement = (x: number, y: number) => {
       if (cursorRef.current) {
-        cursorRef.current.style.top = `${mouse.y}px`;
-        cursorRef.current.style.left = `${mouse.x}px`;
+        cursorRef.current.style.top = `${y}px`;
+        cursorRef.current.style.left = `${x}px`;
       }
     };
     const onMove = (event: MouseEvent) => {
+      const { clientX, clientY } = event;
+
       timer = setTimeout(() => {
-        positionElement(event);
+        positionElement(clientX, clientY);
       }, 100);
     };
+
     window.addEventListener('mousemove', onMove);
     return () => {
-      clearInterval(timer);
+      window.removeEventListener('mousemove', onMove);
+      if (timer !== undefined) {
+        clearTimeout(timer);
+      }
     };
   }, []);
 
-  return <CustomCursorStyled className="cs_cursor_sm" ref={cursorRef} />;
+  return <CustomCursorStyled ref={cursorRef} />;
 };
 
 export default CustomCursor;
