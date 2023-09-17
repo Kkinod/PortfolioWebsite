@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { CustomCursorStyled } from './CustomCursor.styles';
 
-const CustomCursor = () => {
+export const CustomCursor = () => {
   const cursorRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -32,5 +32,3 @@ const CustomCursor = () => {
 
   return <CustomCursorStyled ref={cursorRef} />;
 };
-
-export default CustomCursor;

@@ -11,7 +11,7 @@ import DarkLightBtn from '../../DarkLightBtn/DarkLightBtn';
 interface INavbar {
   handleToggleMenu: () => void;
 }
-const Navbar = ({ handleToggleMenu }: INavbar) => {
+export const Navbar = ({ handleToggleMenu }: INavbar) => {
   const { theme, themeToggler } = useContext(ThemeTogglerContext);
 
   return (
@@ -29,5 +29,3 @@ const Navbar = ({ handleToggleMenu }: INavbar) => {
     </NavStyled>
   );
 };
-
-export default Navbar;

@@ -1,7 +1,7 @@
 import { Main } from './Home.styles';
-import HeroSection from '../../components/HeroSection/HeroSection';
+import { HeroSection } from '../../components/HeroSection/HeroSection';
 
-const Home = () => {
+export const Home = () => {
   return (
     <Main>
       <HeroSection />
@@ -12,5 +12,3 @@ const Home = () => {
     </Main>
   );
 };
-
-export default Home;

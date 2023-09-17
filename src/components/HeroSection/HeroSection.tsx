@@ -13,7 +13,7 @@ import SocialBoxComponent from './SocialBoxComponent/SocialBoxComponent';
 import TextBoxComponent from './TextBoxComponent/TextBoxComponent';
 import { labels } from '../../shared/constants/labels';
 
-const HeroSection = () => {
+export const HeroSection = () => {
   return (
     <HeroSectionStyled>
       <LeftWrapper>
@@ -44,5 +44,3 @@ const HeroSection = () => {
     </HeroSectionStyled>
   );
 };
-
-export default HeroSection;
