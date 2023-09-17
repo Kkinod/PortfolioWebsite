@@ -20,16 +20,14 @@ export const App = () => {
   return (
     <ThemeProvider theme={themeMode}>
       <ThemeTogglerContext.Provider value={contextValue}>
-        <>
-          <GlobalStyle />
-          <BrowserRouter>
-            <Routes>
-              <Route element={<Layout />}>
-                <Route path="/" element={<Home />} />
-              </Route>
-            </Routes>
-          </BrowserRouter>
-        </>
+        <GlobalStyle />
+        <BrowserRouter>
+          <Routes>
+            <Route element={<Layout />}>
+              <Route path="/" element={<Home />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
       </ThemeTogglerContext.Provider>
     </ThemeProvider>
   );
