@@ -6,7 +6,7 @@ export interface IDropdown {
   isOpen: boolean;
 }
 
-const Dropdown = ({ isOpen }: IDropdown) => {
+export const Dropdown = ({ isOpen }: IDropdown) => {
   return (
     <Wrapper $isOpen={isOpen}>
       {sections.map((section) => {
@@ -15,5 +15,3 @@ const Dropdown = ({ isOpen }: IDropdown) => {
     </Wrapper>
   );
 };
-
-export default Dropdown;

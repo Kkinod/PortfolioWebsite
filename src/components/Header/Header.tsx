@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import Dropdown from './Dropdown/Dropdown';
-import Navbar from './Navbar/Navbar';
-import useScrollPosition from '../../shared/hooks/useScrollPosition';
+import { Dropdown } from './Dropdown/Dropdown';
+import { Navbar } from './Navbar/Navbar';
+import { useScrollPosition } from '../../shared/hooks/useScrollPosition';
 import { HeaderStyled } from './Header.styles';
 
-const Header = () => {
+export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const styleChange = useScrollPosition();
 
@@ -19,5 +19,3 @@ const Header = () => {
     </HeaderStyled>
   );
 };
-
-export default Header;

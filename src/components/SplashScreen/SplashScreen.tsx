@@ -5,7 +5,7 @@ import {
   StyledLogoSvg,
 } from './SplashScreen.styles';
 
-const SplashScreen = () => {
+export const SplashScreen = () => {
   return (
     <LoadingPageContainer>
       <StyledLogoSvg />
@@ -15,5 +15,3 @@ const SplashScreen = () => {
     </LoadingPageContainer>
   );
 };
-
-export default SplashScreen;
