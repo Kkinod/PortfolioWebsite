@@ -25,6 +25,7 @@ export const labels = {
       openingTag: '<',
       closingTag: '>',
       code: 'code',
+      author: '- Linus Torvalds',
     },
   },
 } as const;
