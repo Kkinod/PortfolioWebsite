@@ -25,21 +25,17 @@ export const SocialIcon = styled.span`
 export const SocialIconName = styled.span`
   font-weight: 600;
   color: ${({ theme }) => theme.text};
-  //overflow: hidden;
   max-width: 0;
   transition: all 0.5s ease;
 `;
 
 export const IconStyled = styled(Icon)`
-  //width: 30px;
-  //height: 30px;
   scale: 1.5;
 `;
 
 export const LinkStyled = styled(Link)<ILinkedStyled>`
   border-radius: 50px;
   background-color: ${({ theme }) => theme.accentBackground};
-  //border: 0.5px solid #3f4551;
   transition: all 0.4s ease;
   overflow: hidden;
   display: flex;
@@ -53,7 +49,6 @@ export const LinkStyled = styled(Link)<ILinkedStyled>`
 
   &:hover {
     padding-right: 15px;
-    //width: 200px;
     > ${SocialIconName} {
       max-width: 140px;
     }
@@ -62,6 +57,19 @@ export const LinkStyled = styled(Link)<ILinkedStyled>`
       background: ${(props) => (props.$bgColor ? props.$bgColor : '')};
       margin-right: 5px;
       color: white;
+    }
+
+    &:hover {
+      box-shadow: 0 1rem 2rem
+        rgba(${({ theme }) => theme.reverseBackgroundRgb}, 0.1);
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      outline: none;
+      box-shadow: 0 0.25rem 0.5rem
+        rgba(${({ theme }) => theme.reverseBackgroundRgb}, 0.1);
+      transform: translateY(-1px);
     }
   }
 `;
