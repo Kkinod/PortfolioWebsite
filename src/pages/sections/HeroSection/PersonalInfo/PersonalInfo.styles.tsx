@@ -25,21 +25,17 @@ export const SocialIcon = styled.span`
 export const SocialIconName = styled.span`
   font-weight: 600;
   color: ${({ theme }) => theme.text};
-  //overflow: hidden;
   max-width: 0;
   transition: all 0.5s ease;
 `;
 
 export const IconStyled = styled(Icon)`
-  //width: 30px;
-  //height: 30px;
   scale: 1.5;
 `;
 
 export const LinkStyled = styled(Link)<ILinkedStyled>`
   border-radius: 50px;
   background-color: ${({ theme }) => theme.accentBackground};
-  //border: 0.5px solid #3f4551;
   transition: all 0.4s ease;
   overflow: hidden;
   display: flex;
@@ -53,7 +49,6 @@ export const LinkStyled = styled(Link)<ILinkedStyled>`
 
   &:hover {
     padding-right: 15px;
-    //width: 200px;
     > ${SocialIconName} {
       max-width: 140px;
     }
@@ -63,5 +58,62 @@ export const LinkStyled = styled(Link)<ILinkedStyled>`
       margin-right: 5px;
       color: white;
     }
+
+    &:hover {
+      box-shadow: 0 1rem 2rem
+        rgba(${({ theme }) => theme.reverseBackgroundRgb}, 0.1);
+      transform: translateY(-3px);
+    }
+
+    &:active {
+      outline: none;
+      box-shadow: 0 0.25rem 0.5rem
+        rgba(${({ theme }) => theme.reverseBackgroundRgb}, 0.1);
+      transform: translateY(-1px);
+    }
   }
+`;
+
+export const StyledContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 30%;
+  height: 90%;
+`;
+
+export const SpanTopLine = styled.span`
+  position: relative;
+  display: block;
+  color: ${({ theme }) => theme.text};
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 2.4rem;
+    height: 4px;
+    bottom: 10px;
+    background-color: ${({ theme }) => theme.mainMotive};
+  }
+`;
+
+export const H1Styled = styled.h1`
+  display: block;
+  color: ${({ theme }) => theme.text};
+  font-size: 3em;
+  font-weight: 900;
+`;
+
+export const SpanMultiText = styled.span`
+  color: ${({ theme }) => theme.mainMotive};
+  text-transform: capitalize;
+`;
+
+export const ParagraphStyled = styled.p`
+  display: block;
+  width: 90%;
+  color: ${({ theme }) => theme.text};
+  font-size: 1.2em;
 `;
