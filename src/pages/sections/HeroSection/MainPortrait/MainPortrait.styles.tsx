@@ -1,4 +1,9 @@
-import styled from 'styled-components/macro';
+import styled from 'styled-components';
+
+export const StyledContainer = styled.div`
+  width: 40%;
+  height: calc(100vh - 60px);
+`;
 
 export const ImgBox = styled.div`
   position: relative;

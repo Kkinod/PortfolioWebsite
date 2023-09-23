@@ -1,5 +1,5 @@
 import { Main } from './Home.styles';
-import { HeroSection } from '../../components/HeroSection/HeroSection';
+import { HeroSection } from '../sections/HeroSection/HeroSection';
 
 export const Home = () => {
   return (

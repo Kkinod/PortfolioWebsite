@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { SpanStyled } from '../HeroSection.styles';
+import { SpanStyled } from './ScrambleText.styles';
 
 interface IScrambleText {
   initialText: string;
