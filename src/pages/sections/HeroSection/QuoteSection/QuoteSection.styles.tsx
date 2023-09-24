@@ -10,6 +10,7 @@ export const StyledH2 = styled.h2`
   left: 60%;
   font-size: 3.8rem;
   color: ${({ theme }) => theme.text};
+  transition: all 0.5s linear;
 `;
 
 export const StyledParagraph = styled.p`

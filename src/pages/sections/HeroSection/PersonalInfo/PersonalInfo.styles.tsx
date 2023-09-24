@@ -88,6 +88,7 @@ export const SpanTopLine = styled.span`
   color: ${({ theme }) => theme.text};
   font-size: 2.5rem;
   letter-spacing: 5px;
+  transition: all 0.5s linear;
 
   &::after {
     position: absolute;
@@ -104,6 +105,7 @@ export const H1Styled = styled.h1`
   color: ${({ theme }) => theme.text};
   font-size: 3em;
   font-weight: 900;
+  transition: all 0.5s linear;
 `;
 
 export const SpanMultiText = styled.span`
@@ -116,4 +118,5 @@ export const ParagraphStyled = styled.p`
   width: 90%;
   color: ${({ theme }) => theme.text};
   font-size: 1.2em;
+  transition: all 0.5s linear;
 `;
