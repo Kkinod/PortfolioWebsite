@@ -1,8 +1,8 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const StyledContainer = styled.div`
   width: 40%;
-  height: calc(100vh - 60px);
+  height: 100%;
 `;
 
 export const ImgBox = styled.div`
@@ -18,14 +18,15 @@ export const ImgHero = styled.img`
   position: relative;
   bottom: 0;
   height: 100%;
+  align-self: flex-end;
 `;
 
 export const Circle = styled.div`
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
-  width: 40vw;
-  height: 40vw;
+  width: 100%;
+  padding-bottom: 100%;
   border-radius: 50%;
   background-color: ${({ theme }) => theme.mainMotive};
   transform: translate(-50%, -50%);

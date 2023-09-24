@@ -17,8 +17,9 @@ export const QuoteSection = () => {
         {labels.heroSection.quote.openingBracket.toUpperCase()}
         <ScrambleText
           initialText={labels.heroSection.quote.cheap.toUpperCase()}
-          initialDelay={startSecondAnimation ? 99999999 : 100}
+          initialDelay={startSecondAnimation ? 99999999 : 500}
           onAnimationEnd={() => setStartSecondAnimation(true)}
+          color="orangered"
         />
         {labels.heroSection.quote.closingBracket.toUpperCase()}
         <br />

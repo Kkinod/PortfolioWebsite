@@ -5,6 +5,7 @@ export const Home = () => {
   return (
     <Main>
       <HeroSection />
+      {/* <HeroSection /> */}
       {/* <HomeSection> */}
       {/*  <div /> */}
       {/* </HomeSection> */}

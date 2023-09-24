@@ -5,7 +5,9 @@ export const StyledHeroSection = styled.section`
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 60px);
-  padding: 0 5%;
+  height: calc(
+    100vh - (var(--navbar-height) + (var(--header-padding-top-bottom) * 2))
+  );
+  padding: 0 var(--header-padding-left-right);
   overflow: hidden;
 `;

@@ -1,15 +1,25 @@
 import styled from 'styled-components/macro';
+import { breakpoints } from '../../../styles/breakpoints';
 
-export const NavStyled = styled.nav`
+export const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 85rem;
-  height: 60px;
+  height: var(--navbar-height);
   margin: 0 auto;
 
-  @media (max-width: 992px) {
+  @media (max-width: ${breakpoints.smallDesktop}) {
     justify-content: flex-end;
+  }
+`;
+
+export const StyledSpan = styled.span`
+  color: ${({ theme }) => theme.text};
+  font-size: 2rem;
+  font-weight: bold;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    font-size: 1.7rem;
   }
 `;
 
@@ -20,16 +30,16 @@ export const ToggleBtn = styled.div`
   cursor: pointer;
   transition: color 0.5s linear;
 
-  @media (max-width: 992px) {
+  @media (max-width: ${breakpoints.smallDesktop}) {
     display: block;
   }
 `;
 
-export const UlStyled = styled.ul`
+export const StyledUl = styled.ul`
   display: flex;
   gap: 2rem;
 
-  @media (max-width: 992px) {
+  @media (max-width: ${breakpoints.smallDesktop}) {
     display: none;
   }
 `;

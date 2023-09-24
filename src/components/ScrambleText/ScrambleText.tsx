@@ -5,12 +5,14 @@ interface IScrambleText {
   initialText: string;
   initialDelay: number;
   onAnimationEnd: () => void;
+  color?: string;
 }
 
 export const ScrambleText = ({
   initialText,
   initialDelay,
   onAnimationEnd,
+  color,
 }: IScrambleText) => {
   const letterPool = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const [text, setText] = useState(initialText);
@@ -54,5 +56,5 @@ export const ScrambleText = ({
     return () => clearTimeout(timeout);
   }, [initialText, initialDelay, animateText]);
 
-  return <SpanStyled>{text}</SpanStyled>;
+  return <SpanStyled color={color}>{text}</SpanStyled>;
 };
