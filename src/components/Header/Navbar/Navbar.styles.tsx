@@ -7,10 +7,6 @@ export const StyledNav = styled.nav`
   align-items: center;
   height: var(--navbar-height);
   margin: 0 auto;
-
-  @media (max-width: ${breakpoints.smallDesktop}) {
-    justify-content: flex-end;
-  }
 `;
 
 export const StyledSpan = styled.span`
@@ -25,14 +21,19 @@ export const StyledSpan = styled.span`
 
 export const ToggleBtn = styled.div`
   display: none;
-  color: ${({ theme }) => theme.text};
+  margin-left: 1.5rem;
   font-size: 1.5rem;
+  color: ${({ theme }) => theme.text};
   cursor: pointer;
   transition: color 0.5s linear;
 
   @media (max-width: ${breakpoints.smallDesktop}) {
     display: block;
   }
+`;
+
+export const StyledDiv = styled.div`
+  display: flex;
 `;
 
 export const StyledUl = styled.ul`
