@@ -7,6 +7,10 @@ export const sections = [
   'Contact',
 ] as const;
 export const labels = {
+  general: {
+    name: 'Kamil',
+  },
+
   preloader: {
     nickName: 'Donikk',
   },

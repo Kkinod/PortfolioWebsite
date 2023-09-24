@@ -1,16 +1,21 @@
 import styled from 'styled-components/macro';
 
-export const NavStyled = styled.nav`
+export const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 85rem;
-  height: 60px;
+  height: var(--navbar-height);
   margin: 0 auto;
 
   @media (max-width: 992px) {
     justify-content: flex-end;
   }
+`;
+
+export const StyledSpan = styled.span`
+  color: ${({ theme }) => theme.text};
+  font-size: 2rem;
+  font-weight: bold;
 `;
 
 export const ToggleBtn = styled.div`
@@ -25,7 +30,7 @@ export const ToggleBtn = styled.div`
   }
 `;
 
-export const UlStyled = styled.ul`
+export const StyledUl = styled.ul`
   display: flex;
   gap: 2rem;
 

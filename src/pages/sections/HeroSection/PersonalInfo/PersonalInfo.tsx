@@ -1,6 +1,5 @@
 import { labels, socialData } from '../../../../shared/constants/labels';
 import {
-  H1Styled,
   IconStyled,
   LinkStyled,
   ParagraphStyled,
@@ -10,19 +9,21 @@ import {
   SpanMultiText,
   SpanTopLine,
   StyledContainer,
+  StyledH1,
+  StyledWrapper,
 } from './PersonalInfo.styles';
 
 export const PersonalInfo = () => {
   return (
     <StyledContainer>
-      <div>
+      <StyledWrapper>
         <SpanTopLine>{labels.heroSection.greeting}</SpanTopLine>
-        <H1Styled>
+        <StyledH1>
           {labels.heroSection.im}{' '}
           <SpanMultiText>{labels.heroSection.nameSurname}</SpanMultiText>
-        </H1Styled>
+        </StyledH1>
         <ParagraphStyled>{labels.heroSection.occupation}</ParagraphStyled>
-      </div>
+      </StyledWrapper>
       <SocialBox>
         {socialData.map((item) => (
           <LinkStyled

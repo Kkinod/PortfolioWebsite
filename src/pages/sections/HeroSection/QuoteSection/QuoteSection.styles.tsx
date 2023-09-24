@@ -1,7 +1,8 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const StyledQuoteSectionContainer = styled.div`
   width: 30%;
+  height: 15%;
 `;
 
 export const StyledH2 = styled.h2`
@@ -14,6 +15,6 @@ export const StyledH2 = styled.h2`
 `;
 
 export const StyledParagraph = styled.p`
-  position: absolute;
   color: ${({ theme }) => theme.text};
+  margin-left: 0.5rem;
 `;

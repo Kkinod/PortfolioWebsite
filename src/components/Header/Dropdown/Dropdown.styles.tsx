@@ -10,11 +10,8 @@ export const Wrapper = styled.div<IWrapper>`
   position: absolute;
   right: 2rem;
   width: 300px;
-
   height: ${(props) => (props.$isOpen ? '288px' : '0px')};
-
   background: rgba(180, 180, 180, 0.1);
-
   backdrop-filter: blur(15px);
   border-radius: 10px;
   overflow: hidden;

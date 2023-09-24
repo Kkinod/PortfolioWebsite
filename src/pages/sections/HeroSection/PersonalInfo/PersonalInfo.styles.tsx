@@ -6,6 +6,20 @@ interface ILinkedStyled {
   $bgColor: string;
 }
 
+export const StyledContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 30%;
+  height: 90%;
+`;
+
+export const StyledWrapper = styled.div`
+  width: 60%;
+  margin-top: 10%;
+  margin-left: 20%;
+`;
+
 export const SocialBox = styled.div`
   display: flex;
 `;
@@ -74,14 +88,6 @@ export const LinkStyled = styled(Link)<ILinkedStyled>`
   }
 `;
 
-export const StyledContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  width: 30%;
-  height: 90%;
-`;
-
 export const SpanTopLine = styled.span`
   position: relative;
   display: block;
@@ -100,10 +106,10 @@ export const SpanTopLine = styled.span`
   }
 `;
 
-export const H1Styled = styled.h1`
+export const StyledH1 = styled.h1`
   display: block;
   color: ${({ theme }) => theme.text};
-  font-size: 3em;
+  font-size: 4rem;
   font-weight: 900;
   transition: all 0.5s linear;
 `;
