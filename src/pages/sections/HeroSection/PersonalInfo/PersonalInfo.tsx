@@ -2,7 +2,6 @@ import { labels, socialData } from '../../../../shared/constants/labels';
 import {
   IconStyled,
   LinkStyled,
-  ParagraphStyled,
   SocialBox,
   SocialIcon,
   SocialIconName,
@@ -10,6 +9,7 @@ import {
   SpanTopLine,
   StyledContainer,
   StyledH1,
+  StyledParagraph,
   StyledWrapper,
 } from './PersonalInfo.styles';
 
@@ -22,7 +22,7 @@ export const PersonalInfo = () => {
           {labels.heroSection.im}{' '}
           <SpanMultiText>{labels.heroSection.nameSurname}</SpanMultiText>
         </StyledH1>
-        <ParagraphStyled>{labels.heroSection.occupation}</ParagraphStyled>
+        <StyledParagraph>{labels.heroSection.occupation}</StyledParagraph>
       </StyledWrapper>
       <SocialBox>
         {socialData.map((item) => (

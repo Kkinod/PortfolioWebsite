@@ -1,6 +1,7 @@
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
 import { Icon } from '@iconify/react';
+import { breakpoints } from '../../../../styles/breakpoints';
 
 interface ILinkedStyled {
   $bgColor: string;
@@ -18,6 +19,10 @@ export const StyledWrapper = styled.div`
   width: 60%;
   margin-top: 10%;
   margin-left: 20%;
+
+  @media (max-width: ${breakpoints.desktop1700}) {
+    width: 80%;
+  }
 `;
 
 export const SocialBox = styled.div`
@@ -103,6 +108,24 @@ export const SpanTopLine = styled.span`
     height: 4px;
     bottom: 10px;
     background-color: ${({ theme }) => theme.mainMotive};
+
+    @media (max-width: ${breakpoints.desktop}) {
+      width: 1.8rem;
+      bottom: 8px;
+    }
+
+    @media (max-width: ${breakpoints.smallDesktop1024}) {
+      width: 1.4rem;
+      bottom: 5px;
+    }
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: ${breakpoints.smallDesktop1024}) {
+    font-size: 1.6rem;
   }
 `;
 
@@ -112,6 +135,14 @@ export const StyledH1 = styled.h1`
   font-size: 4rem;
   font-weight: 900;
   transition: all 0.5s linear;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    font-size: 3rem;
+  }
+
+  @media (max-width: ${breakpoints.smallDesktop1024}) {
+    font-size: 2.4rem;
+  }
 `;
 
 export const SpanMultiText = styled.span`
@@ -119,10 +150,12 @@ export const SpanMultiText = styled.span`
   text-transform: capitalize;
 `;
 
-export const ParagraphStyled = styled.p`
-  display: block;
-  width: 90%;
+export const StyledParagraph = styled.p`
   color: ${({ theme }) => theme.text};
-  font-size: 1.2em;
+  font-size: 1.2rem;
   transition: all 0.5s linear;
+
+  @media (max-width: ${breakpoints.desktop}) {
+    font-size: 0.9rem;
+  }
 `;
