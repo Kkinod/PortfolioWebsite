@@ -1,6 +1,5 @@
 import { labels, socialData } from '../../../../shared/constants/labels';
 import {
-  IconStyled,
   LinkStyled,
   SocialBox,
   SocialIcon,
@@ -9,6 +8,7 @@ import {
   SpanTopLine,
   StyledContainer,
   StyledH1,
+  StyledIcon,
   StyledParagraph,
   StyledWrapper,
 } from './PersonalInfo.styles';
@@ -32,7 +32,7 @@ export const PersonalInfo = () => {
             key={item.title}
           >
             <SocialIcon>
-              <IconStyled icon={`fa6-brands:${item.icon}`} />
+              <StyledIcon icon={`fa6-brands:${item.icon}`} />
             </SocialIcon>
             <SocialIconName>{item.title}</SocialIconName>
           </LinkStyled>

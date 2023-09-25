@@ -27,6 +27,10 @@ export const StyledWrapper = styled.div`
 
 export const SocialBox = styled.div`
   display: flex;
+
+  @media (max-width: ${breakpoints.smallDesktop1024}) {
+    flex-direction: column;
+  }
 `;
 
 export const SocialIcon = styled.span`
@@ -34,11 +38,15 @@ export const SocialIcon = styled.span`
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 3.125rem;
   text-align: center;
   transition: all 0.4s ease;
+
+  @media (max-width: ${breakpoints.smallDesktop1024}) {
+    min-width: 3.125rem;
+  }
 `;
 
 export const SocialIconName = styled.span`
@@ -48,48 +56,57 @@ export const SocialIconName = styled.span`
   transition: all 0.5s ease;
 `;
 
-export const IconStyled = styled(Icon)`
+export const StyledIcon = styled(Icon)`
   scale: 1.5;
 `;
 
 export const LinkStyled = styled(Link)<ILinkedStyled>`
-  border-radius: 50px;
+  border-radius: 3.125rem;
   background-color: ${({ theme }) => theme.accentBackground};
   transition: all 0.4s ease;
   overflow: hidden;
   display: flex;
   align-items: center;
-  box-shadow: 5px 7px 10px
+  box-shadow: 0.3125rem 0.5rem 0.625rem
     rgba(${({ theme }) => theme.reverseBackgroundRgb}, 0.1);
 
   &:not(:last-child) {
-    margin-right: 20px;
+    margin-right: 1.25rem;
+  }
+
+  @media (max-width: ${breakpoints.smallDesktop1024}) {
+    max-width: 3.125rem;
+    margin-right: 0;
+    margin-bottom: 1.25rem;
   }
 
   &:hover {
-    padding-right: 15px;
+    padding-right: 1rem;
+    box-shadow: 0 1rem 2rem
+      rgba(${({ theme }) => theme.reverseBackgroundRgb}, 0.1);
+    transform: translateY(-3px);
+
     > ${SocialIconName} {
-      max-width: 140px;
+      max-width: 8.75rem;
+      margin-left: 0.3125rem;
     }
 
     > ${SocialIcon} {
       background: ${(props) => (props.$bgColor ? props.$bgColor : '')};
-      margin-right: 5px;
       color: white;
     }
 
-    &:hover {
-      box-shadow: 0 1rem 2rem
-        rgba(${({ theme }) => theme.reverseBackgroundRgb}, 0.1);
-      transform: translateY(-3px);
+    @media (max-width: ${breakpoints.smallDesktop1024}) {
+      padding-right: 0;
+      max-width: 8.75rem;
     }
+  }
 
-    &:active {
-      outline: none;
-      box-shadow: 0 0.25rem 0.5rem
-        rgba(${({ theme }) => theme.reverseBackgroundRgb}, 0.1);
-      transform: translateY(-1px);
-    }
+  &:active {
+    outline: none;
+    box-shadow: 0 0.25rem 0.5rem
+      rgba(${({ theme }) => theme.reverseBackgroundRgb}, 0.1);
+    transform: translateY(-1px);
   }
 `;
 
@@ -98,25 +115,25 @@ export const SpanTopLine = styled.span`
   display: block;
   color: ${({ theme }) => theme.text};
   font-size: 2.5rem;
-  letter-spacing: 5px;
+  letter-spacing: 0.3125rem;
   transition: all 0.5s linear;
 
   &::after {
     position: absolute;
     content: '';
     width: 2.4rem;
-    height: 4px;
-    bottom: 10px;
+    height: 0.25rem;
+    bottom: 0.625rem;
     background-color: ${({ theme }) => theme.mainMotive};
 
     @media (max-width: ${breakpoints.desktop}) {
       width: 1.8rem;
-      bottom: 8px;
+      bottom: 0.5rem;
     }
 
     @media (max-width: ${breakpoints.smallDesktop1024}) {
       width: 1.4rem;
-      bottom: 5px;
+      bottom: 0.3125rem;
     }
   }
 
