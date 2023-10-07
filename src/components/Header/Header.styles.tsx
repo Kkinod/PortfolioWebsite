@@ -32,6 +32,13 @@ export const HeaderStyled = styled.header<IHeader>`
     backdrop-filter: blur(15px);
     z-index: -1;
   }
+
+  @media (max-width: ${breakpoints.smallDesktop}) {
+    padding: ${(props) =>
+      props.$styleChange
+        ? '0 var(--header-padding-left-right)'
+        : 'var(--header-padding-top-bottom-middle) var(--header-padding-left-right)'};
+  }
 `;
 
 export const LiStyled = styled.li`
