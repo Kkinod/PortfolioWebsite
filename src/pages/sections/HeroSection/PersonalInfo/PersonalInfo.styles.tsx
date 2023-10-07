@@ -17,6 +17,11 @@ export const StyledContainer = styled.div`
   @media (max-width: ${breakpoints.tabletLandscape}) {
     height: 100%;
   }
+
+  @media (max-width: ${breakpoints.tabletPortrait}) {
+    height: auto;
+    width: 100%;
+  }
 `;
 
 export const StyledWrapper = styled.div`
@@ -28,7 +33,7 @@ export const StyledWrapper = styled.div`
     width: 80%;
   }
 
-  @media (max-width: ${breakpoints.tabletLandscape}) {
+  @media (max-width: ${breakpoints.tabletLandscape700}) {
     margin-top: 0;
     margin-left: 10%;
   }
@@ -39,6 +44,13 @@ export const SocialBox = styled.div`
 
   @media (max-width: ${breakpoints.smallDesktop1024}) {
     flex-direction: column;
+  }
+
+  @media (max-width: ${breakpoints.tabletPortrait}) {
+    position: absolute;
+    z-index: 1000;
+    bottom: 0.25rem;
+    left: 1.5rem;
   }
 `;
 
@@ -62,6 +74,12 @@ export const SocialIcon = styled.span`
     width: 2.5rem;
     height: 2.5rem;
   }
+
+  @media (max-width: ${breakpoints.phoneMedium}) {
+    min-width: 2rem;
+    width: 2rem;
+    height: 2rem;
+  }
 `;
 
 export const SocialIconName = styled.span`
@@ -76,6 +94,10 @@ export const StyledIcon = styled(Icon)`
 
   @media (max-width: ${breakpoints.tabletLandscape}) {
     scale: 1.3;
+  }
+
+  @media (max-width: ${breakpoints.phoneMedium}) {
+    scale: 1.1;
   }
 `;
 
@@ -103,6 +125,10 @@ export const LinkStyled = styled(Link)<ILinkedStyled>`
     max-width: 2.5rem;
   }
 
+  @media (max-width: ${breakpoints.phoneMedium}) {
+    max-width: 2rem;
+  }
+
   &:hover {
     padding-right: 1rem;
     box-shadow: 0 1rem 2rem
@@ -122,6 +148,19 @@ export const LinkStyled = styled(Link)<ILinkedStyled>`
     @media (max-width: ${breakpoints.smallDesktop1024}) {
       padding-right: 0;
       max-width: 8.75rem;
+    }
+
+    @media (max-width: ${breakpoints.tabletPortrait}) {
+      padding-right: 1rem;
+    }
+
+    @media (max-width: ${breakpoints.tabletPortrait500}) {
+      padding-right: 0;
+      max-width: 2.5rem;
+    }
+
+    @media (max-width: ${breakpoints.phoneMedium}) {
+      max-width: 2rem;
     }
   }
 
@@ -171,6 +210,14 @@ export const SpanTopLine = styled.span`
   @media (max-width: ${breakpoints.tabletLandscape}) {
     font-size: 1.4rem;
   }
+
+  @media (max-width: ${breakpoints.tabletPortrait}) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: ${breakpoints.phoneMedium}) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const StyledH1 = styled.h1`
@@ -179,6 +226,10 @@ export const StyledH1 = styled.h1`
   font-size: 4rem;
   font-weight: 900;
   transition: all 0.5s linear;
+
+  @media (max-width: ${breakpoints.desktop1440}) {
+    font-size: 3.5rem;
+  }
 
   @media (max-width: ${breakpoints.desktop}) {
     font-size: 3rem;
@@ -194,6 +245,18 @@ export const StyledH1 = styled.h1`
 
   @media (max-width: ${breakpoints.tabletLandscape}) {
     font-size: 1.5rem;
+  }
+
+  @media (max-width: ${breakpoints.tabletPortrait}) {
+    font-size: 2.2rem;
+  }
+
+  @media (max-width: ${breakpoints.tabletPortrait500}) {
+    font-size: 2rem;
+  }
+
+  @media (max-width: ${breakpoints.phoneMedium}) {
+    font-size: 1.7rem;
   }
 `;
 
