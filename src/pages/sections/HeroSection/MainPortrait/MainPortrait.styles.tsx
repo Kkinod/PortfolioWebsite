@@ -5,16 +5,8 @@ export const StyledContainer = styled.div`
   width: 35%;
   height: 100%;
 
-  @media (max-width: ${breakpoints.hdDesktop}) {
-    width: 50%;
-  }
-
-  @media (max-width: ${breakpoints.desktop1700}) {
-    width: 55%;
-  }
-
   @media (max-width: ${breakpoints.desktop}) {
-    width: 60%;
+    width: 45%;
   }
 
   @media (max-width: ${breakpoints.smallDesktop1024}) {
@@ -23,6 +15,12 @@ export const StyledContainer = styled.div`
 
   @media (max-height: ${breakpoints.tabletPortrait500}) {
     width: 45%;
+  }
+
+  @media (max-width: ${breakpoints.tabletPortrait}) {
+    height: 0;
+    width: 85%;
+    flex-grow: 1;
   }
 `;
 
@@ -51,4 +49,8 @@ export const Circle = styled.div`
   border-radius: 50%;
   background-color: ${({ theme }) => theme.mainMotive};
   transform: translate(-50%, -50%);
+
+  @media (max-width: ${breakpoints.phoneMedium}) {
+    top: 40%;
+  }
 `;

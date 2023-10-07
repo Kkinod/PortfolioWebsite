@@ -22,4 +22,8 @@ export const StyledHeroSection = styled.section`
     );
     padding: 0 var(--header-padding-left-right-middle);
   }
+
+  @media (max-width: ${breakpoints.tabletPortrait}) {
+    flex-direction: column;
+  }
 `;

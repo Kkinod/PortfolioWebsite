@@ -1,12 +1,14 @@
 export const breakpoints = {
   // 320px
   smallPhone: '20rem',
-  // 400px
-  phoneMedium: '25rem',
+  // 420px
+  phoneMedium: '26.25rem',
   // 500px
   tabletPortrait500: '31.25rem',
-  // 600px
-  tabletPortrait: '37.5rem',
+  // 608px
+  tabletPortrait: '38rem',
+  // 700px
+  tabletLandscape700: '43.75rem',
   // 800px
   tabletLandscape: '50rem',
   // 900px
@@ -21,4 +23,6 @@ export const breakpoints = {
   desktop1700: '106.25rem',
   // 1920px
   hdDesktop: '120rem',
+  // 2048px
+  DKDesktop: '128rem',
 };
