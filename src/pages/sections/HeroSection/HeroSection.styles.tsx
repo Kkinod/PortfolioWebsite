@@ -20,5 +20,6 @@ export const StyledHeroSection = styled.section`
             (var(--header-padding-top-bottom-middle) * 2)
         )
     );
+    padding: 0 var(--header-padding-left-right-middle);
   }
 `;

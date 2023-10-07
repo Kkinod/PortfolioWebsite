@@ -5,6 +5,7 @@ export const Home = () => {
   return (
     <StyledMainSection>
       <HeroSection />
+      {/* <HeroSection /> */}
       {/* <HomeSection> */}
       {/*  <div /> */}
       {/* </HomeSection> */}

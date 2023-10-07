@@ -20,6 +20,10 @@ export const StyledContainer = styled.div`
   @media (max-width: ${breakpoints.smallDesktop1024}) {
     width: 65%;
   }
+
+  @media (max-height: ${breakpoints.tabletPortrait500}) {
+    width: 45%;
+  }
 `;
 
 export const ImgBox = styled.div`

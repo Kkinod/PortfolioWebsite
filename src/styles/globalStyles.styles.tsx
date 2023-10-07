@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
     --header-padding-top-bottom: 2rem;
     --header-padding-top-bottom-middle: 1.5rem;
     --header-padding-left-right: 3rem;
+    --header-padding-left-right-middle: 1.5rem;
   }
   
   *, 
