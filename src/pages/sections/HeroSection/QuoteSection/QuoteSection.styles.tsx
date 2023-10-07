@@ -8,6 +8,14 @@ export const StyledQuoteSectionContainer = styled.div`
   @media (max-width: ${breakpoints.desktop1700}) {
     height: 25%;
   }
+
+  @media (max-width: ${breakpoints.smallDesktop}) {
+    height: 15%;
+  }
+
+  @media (max-width: ${breakpoints.tabletLandscape}) {
+    height: 25%;
+  }
 `;
 
 export const StyledH2 = styled.h2`
@@ -35,11 +43,24 @@ export const StyledH2 = styled.h2`
   }
 
   @media (max-width: ${breakpoints.smallDesktop}) {
+    top: 39%;
     font-size: 1.65rem;
+  }
+
+  @media (max-width: ${breakpoints.tabletLandscape}) {
+    font-size: 1.24rem;
   }
 `;
 
 export const StyledParagraph = styled.p`
   color: ${({ theme }) => theme.text};
   margin-left: 0.5rem;
+
+  @media (max-width: ${breakpoints.smallDesktop}) {
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: ${breakpoints.tabletLandscape}) {
+    font-size: 0.7rem;
+  }
 `;

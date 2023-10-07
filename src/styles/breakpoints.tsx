@@ -3,6 +3,8 @@ export const breakpoints = {
   smallPhone: '20rem',
   // 400px
   phoneMedium: '25rem',
+  // 500px
+  tabletPortrait500: '31.25rem',
   // 600px
   tabletPortrait: '37.5rem',
   // 800px

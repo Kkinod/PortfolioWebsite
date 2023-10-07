@@ -13,6 +13,10 @@ export const StyledContainer = styled.div`
   flex-direction: column;
   width: 30%;
   height: 90%;
+
+  @media (max-width: ${breakpoints.tabletLandscape}) {
+    height: 100%;
+  }
 `;
 
 export const StyledWrapper = styled.div`
@@ -22,6 +26,11 @@ export const StyledWrapper = styled.div`
 
   @media (max-width: ${breakpoints.desktop1700}) {
     width: 80%;
+  }
+
+  @media (max-width: ${breakpoints.tabletLandscape}) {
+    margin-top: 0;
+    margin-left: 10%;
   }
 `;
 
@@ -158,6 +167,10 @@ export const SpanTopLine = styled.span`
   @media (max-width: ${breakpoints.smallDesktop1024}) {
     font-size: 1.6rem;
   }
+
+  @media (max-width: ${breakpoints.tabletLandscape}) {
+    font-size: 1.4rem;
+  }
 `;
 
 export const StyledH1 = styled.h1`
@@ -177,6 +190,10 @@ export const StyledH1 = styled.h1`
 
   @media (max-width: ${breakpoints.smallDesktop}) {
     font-size: 1.9rem;
+  }
+
+  @media (max-width: ${breakpoints.tabletLandscape}) {
+    font-size: 1.5rem;
   }
 `;
 
