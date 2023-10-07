@@ -33,6 +33,10 @@ export const StyledH2 = styled.h2`
   @media (max-width: ${breakpoints.smallDesktop1024}) {
     font-size: 2rem;
   }
+
+  @media (max-width: ${breakpoints.smallDesktop}) {
+    font-size: 1.65rem;
+  }
 `;
 
 export const StyledParagraph = styled.p`

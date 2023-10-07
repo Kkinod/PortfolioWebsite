@@ -1,8 +1,25 @@
 import styled from 'styled-components/macro';
+import { breakpoints } from '../../../../styles/breakpoints';
 
 export const StyledContainer = styled.div`
-  width: 40%;
+  width: 35%;
   height: 100%;
+
+  @media (max-width: ${breakpoints.hdDesktop}) {
+    width: 50%;
+  }
+
+  @media (max-width: ${breakpoints.desktop1700}) {
+    width: 55%;
+  }
+
+  @media (max-width: ${breakpoints.desktop}) {
+    width: 60%;
+  }
+
+  @media (max-width: ${breakpoints.smallDesktop1024}) {
+    width: 65%;
+  }
 `;
 
 export const ImgBox = styled.div`

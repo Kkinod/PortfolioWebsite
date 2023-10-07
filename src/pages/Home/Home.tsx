@@ -1,15 +1,14 @@
-import { Main } from './Home.styles';
+import { StyledMainSection } from './Home.styles';
 import { HeroSection } from '../sections/HeroSection/HeroSection';
 
 export const Home = () => {
   return (
-    <Main>
+    <StyledMainSection>
       <HeroSection />
-      {/* <HeroSection /> */}
       {/* <HomeSection> */}
       {/*  <div /> */}
       {/* </HomeSection> */}
       {/* abcf */}
-    </Main>
+    </StyledMainSection>
   );
 };

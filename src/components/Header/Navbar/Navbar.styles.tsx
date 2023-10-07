@@ -7,6 +7,10 @@ export const StyledNav = styled.nav`
   align-items: center;
   height: var(--navbar-height);
   margin: 0 auto;
+
+  @media (max-width: ${breakpoints.smallDesktop}) {
+    height: var(--navbar-height-middle);
+  }
 `;
 
 export const StyledSpan = styled.span`

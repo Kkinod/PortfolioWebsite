@@ -47,6 +47,12 @@ export const SocialIcon = styled.span`
   @media (max-width: ${breakpoints.smallDesktop1024}) {
     min-width: 3.125rem;
   }
+
+  @media (max-width: ${breakpoints.tabletLandscape}) {
+    min-width: 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 `;
 
 export const SocialIconName = styled.span`
@@ -58,6 +64,10 @@ export const SocialIconName = styled.span`
 
 export const StyledIcon = styled(Icon)`
   scale: 1.5;
+
+  @media (max-width: ${breakpoints.tabletLandscape}) {
+    scale: 1.3;
+  }
 `;
 
 export const LinkStyled = styled(Link)<ILinkedStyled>`
@@ -78,6 +88,10 @@ export const LinkStyled = styled(Link)<ILinkedStyled>`
     max-width: 3.125rem;
     margin-right: 0;
     margin-bottom: 1.25rem;
+  }
+
+  @media (max-width: ${breakpoints.tabletLandscape}) {
+    max-width: 2.5rem;
   }
 
   &:hover {
@@ -159,6 +173,10 @@ export const StyledH1 = styled.h1`
 
   @media (max-width: ${breakpoints.smallDesktop1024}) {
     font-size: 2.4rem;
+  }
+
+  @media (max-width: ${breakpoints.smallDesktop}) {
+    font-size: 1.9rem;
   }
 `;
 

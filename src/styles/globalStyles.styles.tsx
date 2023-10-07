@@ -3,7 +3,9 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   :root {
     --navbar-height: 4rem;
+    --navbar-height-middle: 2.5rem;
     --header-padding-top-bottom: 2rem;
+    --header-padding-top-bottom-middle: 1.5rem;
     --header-padding-left-right: 3rem;
   }
   
