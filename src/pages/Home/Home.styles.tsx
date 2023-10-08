@@ -12,4 +12,10 @@ export const StyledMainSection = styled.div`
         (var(--header-padding-top-bottom-middle) * 2)
     );
   }
+
+  @media (max-width: ${breakpoints.smallPhone}) {
+    padding-top: calc(
+      var(--navbar-height-middle) + (var(--header-padding-top-bottom-small) * 2)
+    );
+  }
 `;

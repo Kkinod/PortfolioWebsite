@@ -11,15 +11,15 @@ export const StyledQuoteSectionContainer = styled.div`
 
   @media (max-width: ${breakpoints.tabletPortrait}) {
     position: absolute;
-    top: 25%;
-    left: 63%;
+    top: 23%;
+    right: 5%;
     height: auto;
     width: auto;
   }
 
   @media (max-width: ${breakpoints.phoneMedium}) {
     top: 28%;
-    left: 55%;
+    //left: 55%;
   }
 `;
 
@@ -75,7 +75,13 @@ export const StyledH2 = styled.h2`
   }
 
   @media (max-width: ${breakpoints.phoneMedium}) {
+    width: 10rem;
     font-size: 0.8rem;
+  }
+
+  @media (max-width: ${breakpoints.phoneMedium}) {
+    width: 7.5rem;
+    font-size: 0.6rem;
   }
 `;
 
@@ -89,5 +95,9 @@ export const StyledParagraph = styled.p`
 
   @media (max-width: ${breakpoints.tabletLandscape}) {
     font-size: 0.7rem;
+  }
+
+  @media (max-width: ${breakpoints.phoneMedium}) {
+    font-size: 0.5rem;
   }
 `;

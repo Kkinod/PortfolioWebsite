@@ -26,4 +26,15 @@ export const StyledHeroSection = styled.section`
   @media (max-width: ${breakpoints.tabletPortrait}) {
     flex-direction: column;
   }
+
+  @media (max-width: ${breakpoints.smallPhone}) {
+    height: calc(
+      100vh -
+        (
+          var(--navbar-height-middle) +
+            (var(--header-padding-top-bottom-small) * 2)
+        )
+    );
+    padding: 0 var(--header-padding-left-right-middle);
+  }
 `;
