@@ -8,7 +8,7 @@ interface IHeader {
 export const HeaderStyled = styled.header<IHeader>`
   contain: layout;
   position: fixed;
-  z-index: 200;
+  z-index: 20000;
   top: 0;
   left: 0;
   width: 100%;
@@ -38,6 +38,13 @@ export const HeaderStyled = styled.header<IHeader>`
       props.$styleChange
         ? '0 var(--header-padding-left-right)'
         : 'var(--header-padding-top-bottom-middle) var(--header-padding-left-right-middle)'};
+  }
+
+  @media (max-width: ${breakpoints.smallPhone}) {
+    padding: ${(props) =>
+      props.$styleChange
+        ? '0 var(--header-padding-left-right)'
+        : 'var(--header-padding-top-bottom-small) var(--header-padding-left-right-middle)'};
   }
 `;
 

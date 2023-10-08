@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     --navbar-height-middle: 2.5rem;
     --header-padding-top-bottom: 2rem;
     --header-padding-top-bottom-middle: 1.5rem;
+    --header-padding-top-bottom-small: 1rem;
     --header-padding-left-right: 3rem;
     --header-padding-left-right-middle: 1.5rem;
   }

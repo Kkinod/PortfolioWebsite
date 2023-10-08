@@ -218,6 +218,10 @@ export const SpanTopLine = styled.span`
   @media (max-width: ${breakpoints.phoneMedium}) {
     font-size: 1.5rem;
   }
+
+  @media (max-width: ${breakpoints.smallPhone}) {
+    font-size: 1.3rem;
+  }
 `;
 
 export const StyledH1 = styled.h1`
@@ -258,6 +262,10 @@ export const StyledH1 = styled.h1`
   @media (max-width: ${breakpoints.phoneMedium}) {
     font-size: 1.7rem;
   }
+
+  @media (max-width: ${breakpoints.phoneMedium}) {
+    font-size: 1.2rem;
+  }
 `;
 
 export const SpanMultiText = styled.span`
@@ -272,5 +280,9 @@ export const StyledParagraph = styled.p`
 
   @media (max-width: ${breakpoints.desktop}) {
     font-size: 0.9rem;
+  }
+
+  @media (max-width: ${breakpoints.phoneMedium}) {
+    font-size: 0.6rem;
   }
 `;
