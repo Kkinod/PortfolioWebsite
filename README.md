@@ -5,7 +5,6 @@
 Work in progress!
 I'm currently working on:
 - Home Page
-   - arrangement of elements at a resolution below 800 px
    - home page tests
 <br />
 // ====================
