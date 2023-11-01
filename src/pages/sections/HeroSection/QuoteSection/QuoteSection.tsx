@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import {
-  StyledH2,
-  StyledParagraph,
+  StyledMotionH2,
+  StyledMotionParagraph,
   StyledQuoteSectionContainer,
 } from './QuoteSection.styles';
 import { labels } from '../../../../shared/constants/labels';
@@ -12,12 +12,20 @@ export const QuoteSection = () => {
 
   return (
     <StyledQuoteSectionContainer>
-      <StyledH2>
+      <StyledMotionH2
+        variants={{
+          hidden: { opacity: 0, y: -40 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 0.25, delay: 0.25 }}
+      >
         {labels.heroSection.quote.talkIs.toUpperCase()}{' '}
         {labels.heroSection.quote.openingBracket.toUpperCase()}
         <ScrambleText
           initialText={labels.heroSection.quote.cheap.toUpperCase()}
-          initialDelay={startSecondAnimation ? 99999999 : 500}
+          initialDelay={startSecondAnimation ? 99999999 : 1000}
           onAnimationEnd={() => setStartSecondAnimation(true)}
           color="orangered"
         />
@@ -31,8 +39,18 @@ export const QuoteSection = () => {
           onAnimationEnd={() => setStartSecondAnimation(false)}
         />
         {labels.heroSection.quote.closingTag.toUpperCase()}
-      </StyledH2>
-      <StyledParagraph>{labels.heroSection.quote.author}</StyledParagraph>
+      </StyledMotionH2>
+      <StyledMotionParagraph
+        variants={{
+          hidden: { opacity: 0, y: -75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 0.9, delay: 0.25 }}
+      >
+        {labels.heroSection.quote.author}
+      </StyledMotionParagraph>
     </StyledQuoteSectionContainer>
   );
 };

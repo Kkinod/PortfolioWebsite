@@ -10,20 +10,28 @@ import {
   StyledH1,
   StyledIcon,
   StyledParagraph,
-  StyledWrapper,
+  StyledMotionWrapper,
 } from './PersonalInfo.styles';
 
 export const PersonalInfo = () => {
   return (
     <StyledContainer>
-      <StyledWrapper>
+      <StyledMotionWrapper
+        variants={{
+          hidden: { opacity: 0, y: -75 },
+          visible: { opacity: 1, y: 0 },
+        }}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 0.9, delay: 0.25 }}
+      >
         <SpanTopLine>{labels.heroSection.greeting}</SpanTopLine>
         <StyledH1>
           {labels.heroSection.im}{' '}
           <SpanMultiText>{labels.heroSection.nameSurname}</SpanMultiText>
         </StyledH1>
         <StyledParagraph>{labels.heroSection.occupation}</StyledParagraph>
-      </StyledWrapper>
+      </StyledMotionWrapper>
       <SocialBox>
         {socialData.map((item) => (
           <LinkStyled
