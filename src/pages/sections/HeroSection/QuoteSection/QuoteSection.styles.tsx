@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import styled from 'styled-components/macro';
 import { breakpoints } from '../../../../styles/breakpoints';
 
@@ -23,7 +22,7 @@ export const StyledQuoteSectionContainer = styled.div`
   }
 `;
 
-export const StyledMotionH2 = styled(motion.h2)`
+export const StyledH2 = styled.h2`
   position: absolute;
   top: 35%;
   right: 10%;
@@ -85,7 +84,7 @@ export const StyledMotionH2 = styled(motion.h2)`
   }
 `;
 
-export const StyledMotionParagraph = styled(motion.p)`
+export const StyledParagraph = styled.p`
   color: ${({ theme }) => theme.text};
   margin-left: 0.5rem;
 

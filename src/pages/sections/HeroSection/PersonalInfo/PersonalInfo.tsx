@@ -10,42 +10,39 @@ import {
   StyledH1,
   StyledIcon,
   StyledParagraph,
-  StyledMotionWrapper,
+  StyledWrapper,
 } from './PersonalInfo.styles';
+import { RevealAnimation } from '../../../../components/utils/RevealAnimation/RevealAnimation';
 
 export const PersonalInfo = () => {
   return (
     <StyledContainer>
-      <StyledMotionWrapper
-        variants={{
-          hidden: { opacity: 0, y: -75 },
-          visible: { opacity: 1, y: 0 },
-        }}
-        initial="hidden"
-        animate="visible"
-        transition={{ duration: 0.9, delay: 0.25 }}
-      >
-        <SpanTopLine>{labels.heroSection.greeting}</SpanTopLine>
-        <StyledH1>
-          {labels.heroSection.im}{' '}
-          <SpanMultiText>{labels.heroSection.nameSurname}</SpanMultiText>
-        </StyledH1>
-        <StyledParagraph>{labels.heroSection.occupation}</StyledParagraph>
-      </StyledMotionWrapper>
-      <SocialBox>
-        {socialData.map((item) => (
-          <LinkStyled
-            $bgColor={item.backgroundColor}
-            to={item.link}
-            key={item.title}
-          >
-            <SocialIcon>
-              <StyledIcon icon={`fa6-brands:${item.icon}`} />
-            </SocialIcon>
-            <SocialIconName>{item.title}</SocialIconName>
-          </LinkStyled>
-        ))}
-      </SocialBox>
+      <RevealAnimation axis="x">
+        <StyledWrapper>
+          <SpanTopLine>{labels.heroSection.greeting}</SpanTopLine>
+          <StyledH1>
+            {labels.heroSection.im}{' '}
+            <SpanMultiText>{labels.heroSection.nameSurname}</SpanMultiText>
+          </StyledH1>
+          <StyledParagraph>{labels.heroSection.occupation}</StyledParagraph>
+        </StyledWrapper>
+      </RevealAnimation>
+      <RevealAnimation axis="x">
+        <SocialBox>
+          {socialData.map((item) => (
+            <LinkStyled
+              $bgColor={item.backgroundColor}
+              to={item.link}
+              key={item.title}
+            >
+              <SocialIcon>
+                <StyledIcon icon={`fa6-brands:${item.icon}`} />
+              </SocialIcon>
+              <SocialIconName>{item.title}</SocialIconName>
+            </LinkStyled>
+          ))}
+        </SocialBox>
+      </RevealAnimation>
     </StyledContainer>
   );
 };
