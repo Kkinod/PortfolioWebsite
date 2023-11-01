@@ -1,6 +1,5 @@
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import { Icon } from '@iconify/react';
 import { breakpoints } from '../../../../styles/breakpoints';
 
@@ -25,7 +24,7 @@ export const StyledContainer = styled.div`
   }
 `;
 
-export const StyledMotionWrapper = styled(motion.div)`
+export const StyledWrapper = styled.div`
   width: 60%;
   margin-top: 10%;
   margin-left: 20%;
