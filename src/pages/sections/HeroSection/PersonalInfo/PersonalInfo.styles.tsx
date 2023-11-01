@@ -1,5 +1,6 @@
 import styled from 'styled-components/macro';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { Icon } from '@iconify/react';
 import { breakpoints } from '../../../../styles/breakpoints';
 
@@ -24,7 +25,7 @@ export const StyledContainer = styled.div`
   }
 `;
 
-export const StyledWrapper = styled.div`
+export const StyledMotionWrapper = styled(motion.div)`
   width: 60%;
   margin-top: 10%;
   margin-left: 20%;
@@ -48,7 +49,7 @@ export const SocialBox = styled.div`
 
   @media (max-width: ${breakpoints.tabletPortrait}) {
     position: absolute;
-    z-index: 1000;
+    z-index: 1;
     bottom: 0.25rem;
     left: 1.5rem;
   }

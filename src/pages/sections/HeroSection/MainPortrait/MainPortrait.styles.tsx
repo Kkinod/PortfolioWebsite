@@ -1,7 +1,8 @@
 import styled from 'styled-components/macro';
+import { motion } from 'framer-motion';
 import { breakpoints } from '../../../../styles/breakpoints';
 
-export const StyledContainer = styled.div`
+export const StyledContainer = styled(motion.div)`
   width: 35%;
   height: 100%;
 

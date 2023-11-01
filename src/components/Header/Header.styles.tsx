@@ -8,7 +8,7 @@ interface IHeader {
 export const HeaderStyled = styled.header<IHeader>`
   contain: layout;
   position: fixed;
-  z-index: 20000;
+  z-index: 2;
   top: 0;
   left: 0;
   width: 100%;
