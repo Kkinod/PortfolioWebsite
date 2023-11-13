@@ -10,6 +10,7 @@ I'm currently working on:
 TODO:
 - Correct the description
 - Improve the photo section
+- great section with card on https://zrozumiecreact.pl/
 
 <br />
 // ====================
