@@ -9,6 +9,7 @@ I'm currently working on:
  
 TODO:
 - Correct the description
+- Improve the photo section
 
 <br />
 // ====================
