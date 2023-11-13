@@ -8,6 +8,7 @@ I'm currently working on:
    - home page tests
  
 TODO:
+- Correct the description
 
 <br />
 // ====================
