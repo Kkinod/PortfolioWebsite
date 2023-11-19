@@ -11,7 +11,7 @@ TODO:
 - Correct the description
 - Improve the photo section
 - great section with card on https://zrozumiecreact.pl/
-- blog
+- create blog
 
 <br />
 // ====================
